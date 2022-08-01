@@ -1,39 +1,64 @@
-.App {
-  text-align: center;
+.main {
+  padding: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Card */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.cardBody {
   display: flex;
-  flex-direction: column;
+  column-gap: 16px;
+}
+
+.starBtn,
+.deleteBtn,
+.addFriendBtn {
+  background-color: white;
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: inline-flex;
   align-items: center;
+}
+
+.starBtn img,
+.deleteBtn img {
+  height: 20px;
+  width: 20px;
+}
+
+.inputWrapper {
+  margin: 12px 0;
+}
+
+.input {
+  border: 1px solid #888;
+  border-radius: 4px;
+  margin: 0;
+  margin-right: 12px;
+  padding: 4px 0;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #666;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
+  margin: 20px 0;
+}
+
+.pagination .circle {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  align-items: center;
 }
