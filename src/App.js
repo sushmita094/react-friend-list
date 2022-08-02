@@ -11,8 +11,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-Functionality left:
-- pagination
-*/

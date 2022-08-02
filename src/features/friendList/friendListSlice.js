@@ -20,6 +20,7 @@ export const friendListSlice = createSlice({
     },
     starFriend: (state, action) => {
       let index = -1;
+      // eslint-disable-next-line array-callback-return
       state.map((item, i) => {
         if (item.name === action.payload) index = i;
       });

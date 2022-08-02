@@ -1,16 +1,14 @@
-import { Card, Button } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { Card } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 import {
   deleteFriend,
   starFriend,
 } from "../features/friendList/friendListSlice";
 
 const FriendCard = ({ data }) => {
-  const friendList = useSelector((state) => state.friendList);
   const dispatch = useDispatch();
 
   const handleDelete = (name) => {
-    // handle delete not working
     dispatch(deleteFriend(name));
   };
 
@@ -27,13 +25,13 @@ const FriendCard = ({ data }) => {
             onClick={() => dispatch(starFriend(data.name))}
           >
             {data.isStarred ? (
-              <img src="/icons/star-icon-fill.png" />
+              <img src="/icons/star-icon-fill.png" alt="star icon" />
             ) : (
-              <img src="/icons/star-icon.png" />
+              <img src="/icons/star-icon.png" alt="star icon" />
             )}
           </button>
           <button className="deleteBtn" onClick={() => handleDelete(data.name)}>
-            <img src="/icons/delete-icon.png" />
+            <img src="/icons/delete-icon.png" alt="delete icon" />
           </button>
         </div>
       </Card.Body>

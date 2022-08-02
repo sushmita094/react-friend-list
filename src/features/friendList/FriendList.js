@@ -39,11 +39,13 @@ const FriendList = () => {
     }
 
     paginate(list);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sort, friendList, currentPage]);
 
   useEffect(() => {
     let list = [...friendList];
     paginate(list);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
